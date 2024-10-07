@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.eventhandler.RubyItemEventHandler;
 import com.example.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,6 +23,11 @@ public class MainMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		//mod item
 		ModItems.registerModItems();
+
+		//event item
+		RubyItemEventHandler.registerEvents();
+
 	}
 }

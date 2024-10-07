@@ -5,13 +5,14 @@
 	"name": "assist-mining mod",
 	"description": "this a first mod i learning how to develop mod i want to create mod about assist mining block",
 	"authors": [
-		"Sutthirak Sutsaenya (LuckySimi)"
+		"Sutthirak Sutsaenya",
+		"Atikon Suksri"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/sodtiruk/assist-mining-mod-minecraft"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/assistminingid/icon.png",
 	"environment": "*",
 	"entrypoints": {
