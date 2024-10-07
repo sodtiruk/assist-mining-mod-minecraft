@@ -32,7 +32,8 @@ public class RubyItemEventHandler {
                 List<BlockPos> blockPosList;
 
                 //check case player position and block position
-                if (pitch > 0 && pitch < 45 || pitch >= -45 && pitch < 0) { // ไม่ได้ก้มหน้ามาก หรือ เงยหน้ามาก
+                // > 0 ระยะก้มหน้า < 0 ระยะเงยหน้า
+                if (pitch > 0 && pitch < 15 || pitch >= -30 && pitch < 0) { // ระยะการก้มหน้า  เงยหน้า
                     //เช็คว่าผู้เล่นหันหน้าไปทางไหน
                     //             West                         East
                     if ((yaw < -45 && yaw >= -135) || (yaw > 45 && yaw <= 135)) {
