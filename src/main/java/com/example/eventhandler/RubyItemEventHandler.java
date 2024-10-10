@@ -4,7 +4,6 @@ import com.example.item.ModItems;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,12 +36,12 @@ public class RubyItemEventHandler {
                     //เช็คว่าผู้เล่นหันหน้าไปทางไหน
                     //             West                         East
                     if ((yaw < -45 && yaw >= -135) || (yaw > 45 && yaw <= 135)) {
-                        blockPosList = destroyBlockCasePlayerLookWestOrEast(pos, world);
+                        blockPosList = destroyBlockCasePlayerLookWestOrEast(pos);
                     } else { // case north or south
-                        blockPosList = destroyBlockCasePlayerLookNorthOrSouth(pos, world);
+                        blockPosList = destroyBlockCasePlayerLookNorthOrSouth(pos);
                     }
                 }else {
-                    blockPosList = destroyBlockCasePlayerYieldOrLookUp(pos, world);
+                    blockPosList = destroyBlockCasePlayerYieldOrLookUp(pos);
                 }
 
                 // loop destroy block position
@@ -58,7 +57,7 @@ public class RubyItemEventHandler {
         });
     }
 
-    public static List<BlockPos> destroyBlockCasePlayerLookWestOrEast(BlockPos pos, World world) {
+    public static List<BlockPos> destroyBlockCasePlayerLookWestOrEast(BlockPos pos) {
         List<BlockPos> blockPosList = new ArrayList<>();
 
         for (int z = -1; z <= 1; z++) {
@@ -71,7 +70,7 @@ public class RubyItemEventHandler {
         return blockPosList; // return block position which destroy
     }
 
-    public static List<BlockPos> destroyBlockCasePlayerLookNorthOrSouth(BlockPos pos, World world) {
+    public static List<BlockPos> destroyBlockCasePlayerLookNorthOrSouth(BlockPos pos) {
         List<BlockPos> blockPosList = new ArrayList<>();
 
         for (int x = -1; x <= 1; x++) {
@@ -83,7 +82,7 @@ public class RubyItemEventHandler {
         return blockPosList; // return block position which destroy
     }
 
-    public static List<BlockPos> destroyBlockCasePlayerYieldOrLookUp(BlockPos pos, World world) {
+    public static List<BlockPos> destroyBlockCasePlayerYieldOrLookUp(BlockPos pos) {
         List<BlockPos> blockPosList = new ArrayList<>();
 
         for (int x = -1; x <= 1; x++) {
