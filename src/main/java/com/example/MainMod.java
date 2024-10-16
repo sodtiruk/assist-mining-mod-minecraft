@@ -29,5 +29,8 @@ public class MainMod implements ModInitializer {
 		//event item
 		RubyItemEventHandler.registerEvents();
 
+		//register
+
+
 	}
 }
