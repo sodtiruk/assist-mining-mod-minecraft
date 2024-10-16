@@ -2,11 +2,11 @@
 	"schemaVersion": 1,
 	"id": "modid",
 	"version": "${version}",
-	"name": "assist-mining mod",
-	"description": "this a first mod i learning how to develop mod i want to create mod about assist mining block",
+	"name": "assist-mining",
+	"description": "Assist Mining is a mod that allows you to mine quickly in a 3x3x3 area.",
 	"authors": [
-		"Sutthirak Sutsaenya",
-		"Atikon Suksri"
+		"Sutthirak Sutsaenya (Developer)",
+		"Atikon Suksri (3D Artist)"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
